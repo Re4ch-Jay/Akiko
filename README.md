@@ -30,12 +30,15 @@ Akiko offers a multitude of commands to assist you in various development tasks.
 - make:json [names...]: Create JSON files.
 - make:html [names...]: Create HTML files.
 - make:css [names...]: Create CSS files.
+- make:react [names...]: Create React files.
 - make:comp [names...]: Create React components.
 - make:page [names...]: Create React pages.
 - make:hook [names...]: Create custom React hooks.
+- make:vue [names...]: Create Vue files.
 - make:comp-v [names...]: Create Vue components.
 - make:page-v [names...]: Create Vue pages.
 - make:hook-v [names...]: Create Vue hooks.
+- make:svelte [names...]: Create Svelte files.
 - make:comp-s [names...]: Create Svelte components.
 - make:page-s [names...]: Create Svelte pages.
 - make:jest [names...]: Create Jest test files.

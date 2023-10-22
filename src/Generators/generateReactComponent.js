@@ -2,10 +2,12 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports = function generateReactComponent(name, folder) {
-  const targetDirectory = path.join('src', folder);
+  const targetDirectory = folder ? path.join('src', folder) : 'src';
 
   // Ensure the target directory exists
-  fs.mkdirSync(targetDirectory, { recursive: true });
+  if (folder) {
+    fs.mkdirSync(targetDirectory, { recursive: true });
+  }
 
   const componentContent = `import React from 'react';
 
@@ -29,6 +31,4 @@ export default ${name};
       console.log(`React Component '${name}' created in ${fileName}`);
     }
   });
-}
-
-
+};

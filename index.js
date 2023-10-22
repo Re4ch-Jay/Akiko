@@ -25,6 +25,16 @@ const makeCommand = (name, description, generateFunction, path) => {
       }
     });
 }
+const makeCommandWithoutSpecificFolder = (name, description, generateFunction) => {
+program
+  .command(`make:${name} [names...]`)
+  .description(description)
+  .action((names) => {
+    names.forEach((name) => {
+      generateFunction(name);
+    });
+  });
+}
 
 // Import and call makeCommand for different component types
 
@@ -39,18 +49,21 @@ makeCommand('html', 'Create HTML files', generators.generateHTML, 'HTML');
 makeCommand('css', 'Create CSS files', generators.generateCSS, 'Styles');
 
 // React Command
-makeCommand('comp', 'Create React components', generators.generateReactComponent, 'Components');
-makeCommand('page', 'Create React pages', generators.generateReactComponent, 'Pages');
-makeCommand('hook', 'Create custom React hooks', generators.generateReactHook, 'hooks');
+makeCommandWithoutSpecificFolder('react', 'Create React files', generators.generateReactComponent);
+makeCommand('comp', 'Create React components in src/Components', generators.generateReactComponent, 'Components');
+makeCommand('page', 'Create React pages in src/Pages', generators.generateReactComponent, 'Pages');
+makeCommand('hook', 'Create custom React hooks in src/hooks', generators.generateReactHook, 'hooks');
 
 // Vue Command
-makeCommand('comp-v', 'Create Vue components', generators.generateVueComponent, 'Components');
-makeCommand('page-v', 'Create Vue pages', generators.generateVueComponent, 'Pages');
-makeCommand('hook-v', 'Create Vue hooks', generators.generateVueHook, 'hooks');
+makeCommandWithoutSpecificFolder('vue', 'Create Vue files', generators.generateVueComponent);
+makeCommand('comp-v', 'Create Vue components in src/Components', generators.generateVueComponent, 'Components');
+makeCommand('page-v', 'Create Vue pages in src/Pages', generators.generateVueComponent, 'Pages');
+makeCommand('hook-v', 'Create Vue hooks in src/hooks', generators.generateVueHook, 'hooks');
 
 // Svelte Command
-makeCommand('comp-s', 'Create Svelte components', generators.generateSvelteComponent, 'Components');
-makeCommand('page-s', 'Create Svelte pages', generators.generateSvelteComponent, 'Pages');
+makeCommandWithoutSpecificFolder('svelte', 'Create Svelte files', generators.generateSvelteComponent);
+makeCommand('comp-s', 'Create Svelte components in src/Components', generators.generateSvelteComponent, 'Components');
+makeCommand('page-s', 'Create Svelte pages in src/Pages', generators.generateSvelteComponent, 'Pages');
 
 // Test Command
 makeCommand('jest', 'Create Jest files', generators.generateTestJest, 'Test');
@@ -59,6 +72,7 @@ makeCommand('cypress', 'Create Cypress files', generators.generateTestCypress, '
 
 // .gitignore Command
 makeCommand('gitignore', 'Create gitignore', generators.generateGitignore, '');
+
 
 program
   .command('read <file>')

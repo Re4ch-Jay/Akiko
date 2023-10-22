@@ -2,10 +2,13 @@ const fs = require('fs');
 const path = require('path');
 
 module.exports =  function generateSvelteComponent(name, folder) {
-  const targetDirectory = path.join('src', folder);
+  const targetDirectory = folder ? path.join('src', folder) : 'src';
 
   // Ensure the target directory exists
-  fs.mkdirSync(targetDirectory, { recursive: true });
+  if (folder) {
+    fs.mkdirSync(targetDirectory, { recursive: true });
+  }
+
 
   const componentContent = 
 `
