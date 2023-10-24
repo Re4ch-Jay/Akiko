@@ -1,6 +1,6 @@
 {
   "name": "akiko",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Minimal JavaScript CLI Tool",
   "main": "index.js",
   "preferGlobal": true,
@@ -9,6 +9,14 @@
     "akiko": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Re4ch-Jay/Akiko.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Re4ch-Jay/Akiko/issues"
+  },
+  "homepage": "https://github.com/Re4ch-Jay/Akiko#akiko",
   "keywords": [
     "tool",
     "utility",
