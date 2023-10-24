@@ -10,12 +10,34 @@ Then, you can install it globally using npm:
 
 ```bash
 npm install -g akiko
+akiko --version
 ```
 
 or as a dependency
 
 ```bash
 npm install akiko
+```
+
+In your package.json add scripts
+
+```json
+
+{
+  //
+  "scripts": {
+    // 
+    "akiko": "akiko",
+  },
+  //
+}
+
+```
+Then you can run it through npm
+
+```bash
+npm run akiko --version
+
 ```
 
 #### Usage
