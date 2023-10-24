@@ -133,3 +133,7 @@ Random Quote:
 The best way to predict the future is to create it. - Peter Drucker
 
 ```
+
+#### License
+
+Under the [MIT License](LICENSE)
