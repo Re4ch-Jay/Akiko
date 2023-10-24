@@ -3,11 +3,11 @@
 const program = require('commander');
 const generators = require("./src/Generators");
 const {quotes, getRandomQuote} = require("./src/Quotes");
+const {makeCommand, queryCommand, readFileCommand} = require('./src/commanders');
 
 program.version('1.0.0');
 
 // Import and call makeCommand for different component types
-const makeCommand = require("./src/commanders/makeCommand");
 
 // JavaScript Command
 makeCommand('class', 'Create JavaScript classes', generators.generateJavaScriptClass, 'Class');
@@ -43,10 +43,7 @@ makeCommand('mocha', 'Create Mocha files', generators.generateTestMocha, '__test
 // .gitignore Command
 makeCommand('gitignore', 'Create gitignore', generators.generateGitignore, '');
 
-// const readFileCommand = require("./src/commanders/readFileCommand");
-
-
-const queryCommand = require("./src/commanders/queryCommand");
+readFileCommand();
 
 queryCommand('google', 'https://www.google.com/search?q=');
 queryCommand('youtube', 'https://www.youtube.com/results?search_query=');
