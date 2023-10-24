@@ -1,6 +1,6 @@
 ## Akiko
 
-**Akiko** a versatile developer's command-line toolkit for code generation, file management, web searches, testing setups, and daily motivation. Simplify your development workflows with an all-in-one command-line tool.
+**Akiko** a minimal developer's command-line toolkit for code generation, file management, web searches, testing setups, and daily motivation. Simplify your development workflows with an all-in-one command-line tool.
 
 #### Installation
 
@@ -43,7 +43,6 @@ Akiko offers a multitude of commands to assist you in various development tasks.
 - make:page-s [names...]: Create Svelte pages.
 - make:jest [names...]: Create Jest test files.
 - make:mocha [names...]: Create Mocha test files.
-- make:cypress [names...]: Create Cypress test files.
 
 #### File Management
 
@@ -69,22 +68,68 @@ Akiko offers a multitude of commands to assist you in various development tasks.
 
 - help: Display help information for all available commands.
 
-#### Example
+#### Examples
+
+React
 
 ```bash
-akiko make:comp Button
+akiko make:react Button Card ProductList
+// This command generates React files in your project src/.
+akiko make:comp-r Button Card ProductList
+// This command generates React components in your project src/components.
+akiko make:page-r About Contact Home
+// This command generates React pages in your project src/pages.
+akiko make:hook-r useSearch useFetch
+// This command generates custom React hooks in your project src/hooks.
+akiko make:jest Button Card
+// This command generates Jest in your project src/__tests__.
 ```
 
-This command generates a React component named "Button" in your project src/Components.
+Vue
 
 ```bash
-akiko make:comp Button Card ProductList
+akiko make:vue Button Card ProductList
+// This command generates Vue files in your project src/.
+akiko make:comp-v Button Card ProductList
+// This command generates Vue components in your project src/components.
+akiko make:page-v About Contact Home
+// This command geneates Vue pages in your project src/views.
+akiko make:hook-v useSearch useFetch
+// This command generates custom Vue hooks in your project src/hooks.
+akiko make:jest Button Card
+// This command generates Jest in your project src/__tests__.
 ```
 
-This command generates multiple React component in your project src/Components.
+Svelte
+
+```bash
+akiko make:svelte Button Card ProductList
+// This command generates Svelte files in your project src/.
+akiko make:comp-s Button Card ProductList
+// This command generates Svelte components in your project src/components.
+akiko make:page-s About Contact Home
+// This command geneates Svelte pages in your project src/pages.
+```
+
+Web Search
 
 ```bash
 akiko google "React Tutorial"
+
+google Search URL: https://www.google.com/search?q=React%2BTutorial
+
+akiko youtube "React Tutorial"
+akiko github "React Tutorial"
 ```
 
-This command search "React Tutorial" on google search engine.
+This command search "React Tutorial" on (google, youtube, github) search.
+
+Motivational Quote
+
+```bash
+akiko quote
+
+Random Quote:
+The best way to predict the future is to create it. - Peter Drucker
+
+```

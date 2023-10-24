@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 
-
 const program = require('commander');
 const generators = require("./src/Generators");
 const {quotes, getRandomQuote} = require("./src/Quotes");
@@ -38,9 +37,8 @@ makeCommand('comp-s', 'Create Svelte components in src/components', generators.g
 makeCommand('page-s', 'Create Svelte pages in src/pages', generators.generateSvelteComponent, 'pages');
 
 // Test Command
-makeCommand('jest', 'Create Jest files', generators.generateTestJest, 'Test');
-makeCommand('mocha', 'Create Mocha files', generators.generateTestMocha, 'Test');
-makeCommand('cypress', 'Create Cypress files', generators.generateTestCypress, 'Test');
+makeCommand('jest', 'Create Jest files', generators.generateTestJest, '__test__');
+makeCommand('mocha', 'Create Mocha files', generators.generateTestMocha, '__test__');
 
 // .gitignore Command
 makeCommand('gitignore', 'Create gitignore', generators.generateGitignore, '');

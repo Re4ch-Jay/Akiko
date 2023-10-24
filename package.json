@@ -3,12 +3,14 @@
   "version": "1.0.0",
   "description": "Minimal JavaScript CLI Application",
   "main": "index.js",
+  "preferGlobal": true,
+  "bin": "index.js",
   "scripts": {
     "akiko": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Phat Panhareach",
   "license": "ISC",
   "dependencies": {
     "commander": "^11.1.0",
