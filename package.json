@@ -1,6 +1,6 @@
 {
   "name": "akiko",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Minimal JavaScript CLI Tool",
   "main": "index.js",
   "preferGlobal": true,
