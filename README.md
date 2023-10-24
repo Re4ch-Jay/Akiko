@@ -1,6 +1,6 @@
 ## Akiko
 
-**Akiko** a minimal developer's command-line toolkit for code generation, file management, web searches, testing setups, and daily motivation. Simplify your development workflows with an all-in-one command-line tool.
+**Akiko** a minimal JavaScript command-line toolkit for code generation, file management, web searches, testing setups, and daily motivation. Simplify your development workflows with an all-in-one command-line tool.
 
 #### Installation
 
