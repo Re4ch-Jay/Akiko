@@ -11,7 +11,7 @@
   },
   "keywords": [],
   "author": "Phat Panhareach",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "commander": "^11.1.0",
     "fs": "^0.0.1-security"
