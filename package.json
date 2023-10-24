@@ -1,6 +1,6 @@
 {
   "name": "akiko",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Minimal JavaScript CLI Tool",
   "main": "index.js",
   "preferGlobal": true,
@@ -9,7 +9,12 @@
     "akiko": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["tool", "utility", "akiko", "cli"],
+  "keywords": [
+    "tool",
+    "utility",
+    "akiko",
+    "cli"
+  ],
   "author": "Phat Panhareach",
   "license": "MIT",
   "dependencies": {
