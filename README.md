@@ -10,6 +10,7 @@ Then, you can install it globally using npm:
 
 ```bash
 npm install -g akiko
+// In Linux, MacOS terminal or GitBash for Windows
 akiko --version
 ```
 
@@ -24,18 +25,16 @@ In your package.json add scripts
 ```json
 
 {
-  //
   "scripts": {
-    // 
     "akiko": "akiko",
   },
-  //
 }
 
 ```
 Then you can run it through npm
 
 ```bash
+// In Linux, MacOS terminal or GitBash for Windows
 npm run akiko --version
 
 ```
