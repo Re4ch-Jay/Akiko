@@ -9,7 +9,7 @@
     "akiko": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["tool", "utility", "akiko", "cli"],
   "author": "Phat Panhareach",
   "license": "MIT",
   "dependencies": {
