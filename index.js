@@ -3,7 +3,7 @@
 const program = require('commander');
 const generators = require("./src/Generators");
 const {quotes, getRandomQuote} = require("./src/Quotes");
-const {makeCommand, queryCommand, readFileCommand} = require('./src/commanders');
+const {makeCommand, queryCommand, readFileCommand, createProjectCommand} = require('./src/commanders');
 
 program.version('1.0.0');
 
@@ -35,6 +35,9 @@ makeCommand('hook-v', 'Create Vue hooks in src/hooks', generators.generateVueHoo
 makeCommand('svelte', 'Create Svelte files', generators.generateSvelteComponent, "");
 makeCommand('comp-s', 'Create Svelte components in src/components', generators.generateSvelteComponent, 'components');
 makeCommand('page-s', 'Create Svelte pages in src/pages', generators.generateSvelteComponent, 'pages');
+
+// Create Project
+createProjectCommand('Create a ExpressJs Project', 'js');
 
 // Test Command
 makeCommand('jest', 'Create Jest files', generators.generateTestJest, '__test__');

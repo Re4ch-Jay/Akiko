@@ -13,6 +13,7 @@ const generateGitignore = require("./generateGitignore");
 const generateTestJest = require("./generateTestJest"); 
 const generateTestMocha = require("./generateTestMocha"); 
 const generateTestCypress = require("./generateTestCypress"); 
+const generateExpressProject = require("./generateExpressProject");
 
 module.exports = {
     generateJavaScriptClass,
@@ -30,4 +31,5 @@ module.exports = {
     generateTestJest,
     generateTestMocha,
     generateTestCypress,
+    generateExpressProject
 }

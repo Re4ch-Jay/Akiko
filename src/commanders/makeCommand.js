@@ -4,7 +4,7 @@ const makeCommand = (name, description, generateFunction, path) => {
   program
     .command(`make:${name} [names...]`)
     .description(description)
-    .action((names) => {
+    .action(function(names) {
       if (name === 'gitignore') {
         generateFunction();
       } if (name === "react" || name === "vue" || name === "svelte") {
