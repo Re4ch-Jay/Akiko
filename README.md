@@ -45,25 +45,34 @@ Akiko offers a multitude of commands to assist you in various development tasks.
 
 #### Code Generation
 
-- make:class [names...]: Create JavaScript classes.
-- make:object [names...]: Create JavaScript objects.
-- make:func [names...]: Create JavaScript functions.
-- make:json [names...]: Create JSON files.
-- make:html [names...]: Create HTML files.
-- make:css [names...]: Create CSS files.
-- make:react [names...]: Create React files.
-- make:comp-r [names...]: Create React components.
-- make:page-r [names...]: Create React pages.
-- make:hook-r [names...]: Create custom React hooks.
-- make:vue [names...]: Create Vue files.
+- make:comp-r [names...]: Create React components. (--ts for TypeScript)
+- make:page-r [names...]: Create React pages. (--ts for TypeScript)
+- make:hook-r [names...]: Create custom React hooks. (--ts for TypeScript)
+
 - make:comp-v [names...]: Create Vue components.
 - make:page-v [names...]: Create Vue pages.
 - make:hook-v [names...]: Create Vue hooks.
-- make:svelte [names...]: Create Svelte files.
+
 - make:comp-s [names...]: Create Svelte components.
 - make:page-s [names...]: Create Svelte pages.
-- make:jest [names...]: Create Jest test files.
+
+- make:model [options] [names...]          Create Express Model (--ts for TypeScript)
+- make:controller [options] [names...]     Create Express Controller (--ts for TypeScript)
+- make:route [options] [names...]          Create Express Route (--ts for TypeScript)
+- make:middleware [options] [names...]     Create Express Middleware (--ts for TypeScript)
+
+- make:jest [names...]: Create Jest test files 
 - make:mocha [names...]: Create Mocha test files.
+- make:class [names...]: Create JavaScript classes. (--ts for TypeScript)
+- make:object [names...]: Create JavaScript objects. (--ts for TypeScript)
+- make:func [names...]: Create JavaScript functions.  (--ts for TypeScript)
+- make:json [names...]: Create JSON files.
+- make:html [names...]: Create HTML files.
+- make:css [names...]: Create CSS files.
+
+#### Create Project
+
+- create-project:express [options] [name]  Create a ExpressJs Project (--ts for TypeScript)
 
 #### File Management
 
@@ -130,6 +139,53 @@ akiko make:comp-s Button Card ProductList
 // This command generates Svelte components in your project src/components.
 akiko make:page-s About Contact Home
 // This command geneates Svelte pages in your project src/pages.
+```
+
+ExpressJS
+
+```bash
+akiko create-project:express backend_api
+// This command create express project.
+akiko make:model User Comment Post --all
+// This command generates User, Comment, Post model, controller, and route in your project.
+akiko make:model User Comment Post
+// This command generates User, Comment, Post model in your project.
+akiko make:controller User Comment Post
+// This command generates User, Comment, Post controller in your project.
+akiko make:route User Comment Post
+// This command generates User, Comment, Post route in your project.
+akiko make:middleware logger auth isAdmin
+// This command generates logger, auth, isAdmin middleware in your project.
+```
+
+TypeScript
+By only add the flag --ts you can generate the typescript file extension for your project.
+
+```bash
+akiko create-project:express backend_api --ts
+// This command create express project with TypeScript.
+akiko make:model User Comment Post --all --ts 
+// This command generates User, Comment, Post model, controller, and route in your project with TypeScript.
+akiko make:comp-r Button Card --ts
+// This command generates Button and Card components with TypeScript
+```
+
+Create Express Project with JavaScript
+
+```bash
+akiko create-project:express backend_api
+cd backend_api
+npm i
+npm start
+```
+
+Create Express Project with TypeScript
+
+```bash
+akiko create-project:express backend_api --ts
+cd backend_api
+npm i
+npm start
 ```
 
 Web Search
