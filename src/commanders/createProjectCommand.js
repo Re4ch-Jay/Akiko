@@ -1,20 +1,17 @@
 const program = require('commander');
 const generators = require('../Generators')
 
-const createProjectCommand = (description, defualtOption) => {
+const createProjectCommand = (description) => {
   program
     .command(`create-project:express [name]`)
     .description(description)
-    .option('-t, --type <type>', 'File type (js, cs, dart)', defualtOption)
+    .option('-t, --ts', 'TypeScript File')
     .action(function(name) {
-      const type = this.opts().type;
-
-      switch(type){
-        case 'js':
-          return generators.generateExpressProject(name);
-        case 'ts':
-          return generators.generateExpressProject(name);
+      const ts = this.opts().ts;
+      if(ts){
+        return generators.generateExpressProject(name, ts);
       }
+      generators.generateExpressProject(name);
     });
 };
 

@@ -14,6 +14,10 @@ const generateTestJest = require("./generateTestJest");
 const generateTestMocha = require("./generateTestMocha"); 
 const generateTestCypress = require("./generateTestCypress"); 
 const generateExpressProject = require("./generateExpressProject");
+const generateExpressModel = require('./generateExpressModel');
+const generateExpressController = require('./generateExpressController');
+const generateExpressMiddleware = require('./generateExpressMiddleware');
+const generateExpressRoute = require('./generateExpressRoute');
 
 module.exports = {
     generateJavaScriptClass,
@@ -31,5 +35,9 @@ module.exports = {
     generateTestJest,
     generateTestMocha,
     generateTestCypress,
-    generateExpressProject
+    generateExpressProject,
+    generateExpressModel,
+    generateExpressController,
+    generateExpressMiddleware,
+    generateExpressRoute
 }

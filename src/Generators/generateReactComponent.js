@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports = function generateReactComponent(name, folder) {
+module.exports = function generateReactComponent(name, folder, isTypeScript = false) {
   const targetDirectory = folder ? path.join('src', folder) : 'src';
 
   // Ensure the target directory exists
@@ -22,7 +22,7 @@ function ${name}() {
 export default ${name};
 `;
 
-  const fileName = path.join(targetDirectory, `${name}.jsx`);
+  const fileName = path.join(targetDirectory, `${name}.${isTypeScript === true ? 'tsx' : 'jsx'}`);
 
   fs.writeFile(fileName, componentContent, (err) => {
     if (err) {

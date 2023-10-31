@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-module.exports =  function generateJavaScriptClass(name, folder) {
+module.exports =  function generateJavaScriptClass(name, folder, isTypeScript = false) {
   const targetDirectory = path.join('src', folder);
 
   // Ensure the target directory exists
@@ -14,7 +14,7 @@ module.exports =  function generateJavaScriptClass(name, folder) {
 }
 `;
 
-  const fileName = path.join(targetDirectory, `${name}.js`);
+  const fileName = path.join(targetDirectory, `${name}.${isTypeScript === true ? 'ts' : 'js'}`);
 
   fs.writeFile(fileName, componentContent, (err) => {
     if (err) {
