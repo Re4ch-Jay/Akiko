@@ -68,8 +68,22 @@ module.exports = {
 }
 `,
     'models/User.js': '// User Model',
-    'middleware/auth.js': '// Middleware for current authentication',
-    'middleware/guest.js': '// Middleware for guest',
+    'middleware/auth.js': 
+`// auth middleware
+function auth(req, res, next) {
+  
+  // Business Logic
+
+  next(); // Call next() to continue to the next middleware or route handler
+}`,
+    'middleware/guest.js': 
+`// guest middleware
+function guest(req, res, next) {
+  
+  // Business Logic
+
+  next(); // Call next() to continue to the next middleware or route handler
+}`,
     'config/database.js': '// Database Configurations',
     'config/app.js': '// App Configurations',
     '.env': `
@@ -199,8 +213,22 @@ module.exports = {
 }
 `,
     'models/User.ts': '// User Model',
-    'middleware/auth.ts': '// Middleware for current authentication',
-    'middleware/guest.ts': '// Middleware for guest',
+    'middleware/auth.ts': 
+`// auth middleware
+function auth(req, res, next) {
+  
+  // Business Logic
+
+  next(); // Call next() to continue to the next middleware or route handler
+}`,
+    'middleware/guest.ts': 
+`// guest middleware
+function guest(req, res, next) {
+  
+  // Business Logic
+
+  next(); // Call next() to continue to the next middleware or route handler
+}`,
     'config/database.ts': '// Database Configurations',
     'config/app.ts': '// App Configurations',
     '.env': `
